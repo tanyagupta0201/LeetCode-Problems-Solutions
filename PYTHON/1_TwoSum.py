@@ -1,3 +1,6 @@
+# Name: Tanya Gupta
+# Date: 02/10/2022
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         nums_hash = {}
