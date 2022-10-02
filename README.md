@@ -7,7 +7,7 @@
   <img src="_images/Logo.JPG">
 </p>
 
-:star: Feel free to use this project to make your first contribution to an open-source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!
+### Feel free to use this project to make your first contribution to an open-source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!
 
 ### This repository is open to all members of the GitHub community. Any member can contribute to this project!
 
