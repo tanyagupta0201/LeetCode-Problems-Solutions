@@ -25,6 +25,11 @@
 
 5. Writing the author's name and the date modified is a must.
 
+   Example:
+   <p align="left">
+     <img src="_images/img1.JPG">
+   </p>
+
 6. Filename should follow the order
        ````ProblemNumber_ProblemName.extension````
    If there are more than 2 words than the first letter of each word must be capital.
