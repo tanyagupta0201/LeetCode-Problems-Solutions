@@ -32,8 +32,13 @@
        
 7. Don't spam it will be rejected immediately.
 
+## **YOU MAY USE THESE LINKS TO FORMAT YOUR CODE**
 
-   
+C++ FORMATTER    :  https://codebeautify.org/cpp-formatter-beautifier
+
+JAVA FORMATTER   :  https://codebeautify.org/javaviewer
+
+PYTHON FORMATTER :  https://codebeautify.org/python-formatter-beautifier
 
 
 
