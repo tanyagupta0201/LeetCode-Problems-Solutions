@@ -1,7 +1,5 @@
-/*
-Name : Karthik S
-Date : 03 October 2022
-*/
+// Name : Karthik S
+// Date : 03 October 2022
 
 // Link to Question
 // https://leetcode.com/problems/populating-next-right-pointers-in-each-node/submissions/ 
