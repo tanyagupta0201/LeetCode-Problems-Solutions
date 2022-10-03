@@ -1,9 +1,6 @@
 // Name : Karthik S
 // Date : 03 October 2022
 
-// Link to Question
-// https://leetcode.com/problems/number-of-visible-people-in-a-queue/
-
 class Solution {
   public:
     vector < int > canSeePersonsCount(vector < int > & heights) {
