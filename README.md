@@ -15,28 +15,30 @@
 
 0. Contribute a LeetCode Problem. 
 
-1. Always create an issue before making a Pull Request.
+1. Always create an issue before making a Pull Request. 
 
-2. The Program should be executable, with 0 errors and proper documentation.
+2. Make a Pull Request only after the issue has been assigned to you by the owner.
 
-3. Codes are only allowed in C++, Java and Python. 
+3. The Program should be executable, with 0 errors and proper documentation.
 
-4. Do not add a code if it exists already.
+4. Codes are only allowed in C++, Java and Python. 
 
-5. Writing the author's name and the date modified is a must.
+5. Do not add a code if it exists already.
+
+6. Writing the author's name and the date modified is a must.
 
    Example:
    <p align="left">
      <img src="_images/img1.JPG">
    </p>
 
-6. Filename should follow the order
+7. Filename should follow the order
        ````ProblemNumber_ProblemName.extension````
    If there are 2 or more than 2 words than the first letter of each word must be capital.
   
       Example:   ````1_TwoSum.cpp````
        
-7. Don't spam it will be rejected immediately.
+8. Don't spam it will be rejected immediately.
 
 ## **YOU MAY USE THESE LINKS TO FORMAT YOUR CODE**
 
