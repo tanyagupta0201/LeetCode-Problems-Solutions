@@ -1,0 +1,25 @@
+#include "console.h"
+
+int max(int v[], int n){
+    int m = 0;
+    for(int i = 0; i < n;i++){
+        if(v[i] > m){
+           m = v[i];
+        }
+    }
+    return m;
+}
+
+void main(){
+    print("Enter vector size:");
+    int x = readInt();
+    int v[x];
+
+    print("Vector values:");
+    for (int i = 0; i < x; i++){
+        v[i] = readInt();
+    }
+
+    print("Biggest vector number:");
+    printInt(max(v, x));
+}
