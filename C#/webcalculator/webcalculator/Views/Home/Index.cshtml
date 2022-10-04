@@ -1,0 +1,29 @@
+﻿@model Operation
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div class="calculator">
+        <div class="display">
+            <input id="outValue" style="height: 62px" type="text" disabled="disabled" class="col-lg-2" />
+        </div>
+        <div class="controller">
+            <button value="AC" type="button" class="calcBtn top sm">AC</button>
+            <button value="PN" type="button" class="calcBtn top sm">&#xb1;</button>
+            <button value="Percentage" type="button" class="calcBtn calcBtnO top sm">%</button>
+            <button value="Division" type="button" class="calcBtn calcBtnO oper sm">&#247;</button>
+            <button value="7" type="button" class="calcBtn sm calcBtnD">7</button>
+            <button value="8" type="button" class="calcBtn sm calcBtnD">8</button>
+            <button value="9" type="button" class="calcBtn sm calcBtnD">9</button>
+            <button value="Multiplication" type="button" class="calcBtn calcBtnO oper sm">&times;</button>
+            <button value="4" type="button" class="calcBtn sm calcBtnD">4</button>
+            <button value="5" type="button" class="calcBtn sm calcBtnD">5</button>
+            <button value="6" type="button" class="calcBtn sm calcBtnD">6</button>
+            <button value="Subtraction" type="button" class="calcBtn calcBtnO oper sm">-</button>
+            <button value="1" type="button" class="calcBtn sm calcBtnD">1</button>
+            <button value="2" type="button" class="calcBtn sm calcBtnD">2</button>
+            <button value="3" type="button" class="calcBtn sm calcBtnD">3</button>
+            <button value="Addition" type="button" class="calcBtn calcBtnO oper sm">+</button>
+            <button value="0" type="button" class="calcBtn lg calcBtnD">0</button>
+            <button value="." type="button" class="calcBtn sm calcBtnD">.</button>
+            <button value="Equals" type="button" class="calcBtn calcBtnO oper sm">=</button>
+        </div>
+    </div>
+</form>
