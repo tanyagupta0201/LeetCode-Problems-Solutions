@@ -1,3 +1,6 @@
+# Name: Madhu Saini
+# Date: 04/10/2022
+
 class Solution {
     public String removeKdigits(String num, int k) {
         int n = num.length();
