@@ -26,12 +26,17 @@ int editDistance(string str1, string str2) {
   int n = str1.length(); //Space Complexity = O(n+m)
   int m = str2.length();
   vector < int > pre(m + 1, 0); //creating a pre vector
+
   for (int i = 0; i <= m; i++)
+
     pre[i] = i; //initializing the pre vector by its own index
   for (int i = 1; i <= n; i++) {
+
     vector < int > temp(m + 1, 0); //making a temperorary vector
     temp[0] = i;
+
     for (int j = 1; j <= m; j++) {
+
       if (str1[i - 1] == str2[j - 1]) //if the previous elements are equal
         temp[j] = pre[j - 1];
       else
@@ -39,12 +44,15 @@ int editDistance(string str1, string str2) {
     }
     pre = temp; //previous vector becomes temp vector
   }
+
   return pre[m];
 }
 int main() {
+
   string s1;
   cin >> s1;
   string s2;
   cin >> s2;
   cout << editDistance(s1, s2); //calling function
+
 }
