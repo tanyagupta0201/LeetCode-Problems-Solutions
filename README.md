@@ -1,6 +1,6 @@
 # LeetCode-Problems-Solutions
 
-# Hacktoberfest-2022🔥
+# Hacktoberfest-2022
 
 <br>
 <p align="center">
