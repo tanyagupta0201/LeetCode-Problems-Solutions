@@ -1,6 +1,6 @@
-// Time:  O(n^2)
-// Space: O(1)
-// Program for 3sum closest
+// Name : Mihir S
+// Date : 04/10/2022
+
 class Solution {
 public:
     int threeSumClosest(vector<int>& nums, int target) {
