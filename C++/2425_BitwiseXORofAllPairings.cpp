@@ -1,6 +1,6 @@
 /*
 G Nitesh Kuamr Reddy 
-04/10/2022
+05/10/2022
 */
 /*
 You are given two 0-indexed arrays, nums1 and nums2, consisting of non-negative integers. There exists another array, nums3, which contains the bitwise XOR of all pairings of integers between nums1 and nums2 (every integer in nums1 is paired with every integer in nums2 exactly once).
@@ -63,42 +63,25 @@ ans=4^5
 
 
 */
-#include<iostream>
-#include<bits/stdc++.h>
-using namespace std;
 
- int xorAllNums(vector<int>& nums1, vector<int>& nums2) {
-        int ans=0;
-        int n=nums1.size();
-        int n1=nums2.size();
-        if(n%2==0 and n1%2==0) return 0; // both the array have even len
-        if(n&1 and n1&1) // both the array have odd len
-        {
-            for(auto it:nums1) ans=ans^it;  // xor of all elements of the nums1
-            for(auto it:nums2) ans=ans^it;  // xor of all elements of the nums2
-        }
-        else if(n&1 and n1%2==0) for(auto it:nums2) ans=ans^it; // nums1 have odd len while nums2 have even len
-        else if(n%2==0 and n1&1) for(auto it:nums1) ans=ans^it; // nums2 have even len while nums1 have odd len
-        return ans;
-    }
-int main() {
- int n,m; // size of the nums1 and nums2
- cin>>n>>m;
- vector<int>nums1;
- vector<int>nums2;
- for(int i=0;i<n;i++)
- {
-    int x;
-    cin>>x;     // input the values of the nums1
-    nums1.push_back(x);
- }
- for(int i=0;i<m;i++)
- {
-    int x;
-    cin>>x; // input the values of the nums2
-    nums2.push_back(x);
- }
- int ans=xorAllNums(nums1,nums2);
- cout<<ans<<" ";
-     
- return 0; }
+
+class solution
+{
+    public:
+   int xorAllNums(vector<int>&nums1,vector<int>&nums2) {
+  int ans = 0;
+  int n = nums1.size();
+  int n1 = nums2.size();
+  if (n % 2 == 0 and n1 % 2 == 0) return 0; // both the array have even len
+  if (n & 1 and n1 & 1) // both the array have odd len
+  {
+    for (auto it: nums1) ans = ans ^ it; // xor of all elements of the nums1
+    for (auto it: nums2) ans = ans ^ it; // xor of all elements of the nums2
+  } else if (n & 1 and n1 % 2 == 0)
+    for (auto it: nums2) ans = ans ^ it; // nums1 have odd len while nums2 have even len
+  else if (n % 2 == 0 and n1 & 1)
+    for (auto it: nums1) ans = ans ^ it; // nums2 have even len while nums1 have odd len
+  return ans;
+}
+};
+
