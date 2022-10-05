@@ -3,8 +3,6 @@
 
 
 
-//                                                 Add Element at first
-
 // The easiest thing is to know how we can add the element at first.
 
 // currNode -> for iteration
@@ -19,12 +17,10 @@
 
 // Step 4: Put result = newNode
 
-// 												Explanation
-
-// 		For example, if there is an element 1 in the result and if the newnode has 2 then if we 
-// 		put the next of new node as result then 2 will be added infront of the result, or we can say
-// 		new node will get attached at before the result list. Now we will assign result = newnode so
-// 		the head of the linkedlist will be result, our desired answer.
+// For example, if there is an element 1 in the result and if the newnode has 2 then if we 
+// put the next of new node as result then 2 will be added infront of the result, or we can say
+// new node will get attached at before the result list. Now we will assign result = newnode so
+// the head of the linkedlist will be result, our desired answer.
 
 
 class Solution {
