@@ -8,7 +8,7 @@ class Solution {
       if (rows == 0) return 0;
       int cols = matrix[0].size();
       int sum[rows][cols];
-
+      // Storing the prefix sums if values == '1' then add previous sum else 0
       for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
           if (matrix[i][j] == '1') {
@@ -23,12 +23,14 @@ class Solution {
 
       int ans = 0;
       for (int i = 0; i < rows; i++) {
+        // Store all the values in heights array which shows how many consecutive ones are down from the (i,j)th position
         vector < int > heights;
         for (int j = 0; j < cols; j++)
           heights.push_back(sum[i][j]);
         int n = heights.size();
         stack < int > s;
         int right[n], left[n];
+        // Calculating the next greater and previous greater element using the stack method
         for (int i = 0; i < n; i++) {
           while (!s.empty() && heights[s.top()] > heights[i]) {
             right[s.top()] = i;
@@ -54,6 +56,7 @@ class Solution {
           s.pop();
         }
         int maxi = INT_MIN;
+        // Calculating max rectangle of '1' formed from (i,j) position
         for (int i = 0; i < n; i++) {
           maxi = max(maxi, heights[i] * ((right[i] - left[i]) - 1));
         }
