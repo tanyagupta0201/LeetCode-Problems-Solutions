@@ -29,22 +29,22 @@ class Solution {
         int length = s.length();
         String visitedCharacters = "";
 
-        int i=0;
-        int max=0;
+        int i = 0;
+        int max = 0;
 
-        while(i<length){
+        while (i < length) {
             char character01 = s.charAt(i);
             visitedCharacters = visitedCharacters + character01;
-            int j = (i+1);
-            while(j<length){
+            int j = (i + 1);
+            while (j < length) {
                 char character02 = s.charAt(j);
-                if(visitedCharacters.indexOf(character02) == -1){
+                if (visitedCharacters.indexOf(character02) == -1) {
                     visitedCharacters = visitedCharacters + character02;
-                    if(j == (length - 1)){
+                    if (j == (length - 1)) {
                         max = Math.max(max, visitedCharacters.length());
                         visitedCharacters = "";
                     }
-                }else{
+                } else {
                     max = Math.max(max, visitedCharacters.length());
                     visitedCharacters = "";
                     break;
@@ -54,7 +54,7 @@ class Solution {
             i++;
         }
 
-        if(i==1){
+        if (i == 1) {
             max = 1;
         }
 
