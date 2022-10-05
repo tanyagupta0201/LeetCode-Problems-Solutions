@@ -1,3 +1,6 @@
+# Name : Manvi Goyal
+# Date : 05/10/2022
+
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:  # function to calculate maximum sum
         result = max(nums)  # store the maximum value in nums in result variabe
