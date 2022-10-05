@@ -9,20 +9,23 @@
 
 class Solution {
     public int rob(int[] nums) {
-        
+
         int len = nums.length;
         int prev2 = 0, prev = 0;
-    
-        for(int i = 0; i < len; i++){
-            
+
+        for (int i = 0; i < len; i++) {
+
             int take = nums[i], notTake = 0;
-            
-            if(i>1) take += prev2;
-            if(i>0) notTake = prev;
-            
+
+            if (i > 1)
+                take += prev2;
+
+            if (i > 0)
+                notTake = prev;
+
             int curr = Math.max(take, notTake);
             prev2 = prev;
-            prev = curr; 
+            prev = curr;
         }
         return prev;
     }
