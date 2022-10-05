@@ -1,7 +1,7 @@
-//Name: Sahan Mondal
-//Date: 04-10-2022
+// Name: Sahan Mondal
+// Date: 04-10-2022
 
-//Problem Link: https://leetcode.com/problems/number-of-closed-islands/
+// Problem Link: https://leetcode.com/problems/number-of-closed-islands/
 
 class Solution {
 public:
@@ -20,8 +20,8 @@ public:
     int closedIsland(vector<vector<int>>& grid) {
         int n = grid.size(), m = grid[0].size();
         
-        //First, we apply DFS on top, bottom row and left, right column to 
-        //convert the 0's (land) present there and their connected 0's into 1's (water)
+        // First, we apply DFS on top, bottom row and left, right column to 
+        // convert the 0's (land) present there and their connected 0's into 1's (water)
         for(int i = 0; i < n; i++) {
             dfs(i, 0, grid, n, m);
             dfs(i, m - 1, grid, n, m);
@@ -31,8 +31,8 @@ public:
             dfs(n - 1, j, grid, n, m);
         }
         
-        //After converting all edge 0's into 1's, we now apply DFS throughout the grid, to count the 
-        //left 0's and their connected components
+        // After converting all edge 0's into 1's, we now apply DFS throughout the grid, to count the 
+        // left 0's and their connected components
         int count = 0;
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < m; j++) {
