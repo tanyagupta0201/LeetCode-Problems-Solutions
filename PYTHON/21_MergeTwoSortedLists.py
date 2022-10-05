@@ -12,8 +12,10 @@ class Solution:
         self, list1: Optional[ListNode], list2: Optional[ListNode]
     ) -> Optional[ListNode]:
 
-        newnode = ListNode()  # create a new linked list
-        current_node = newnode  # node to update
+        newnode = ListNode()
+        # create a new linked list
+        current_node = newnode
+        # node to update
 
         while list1 and list2:
             if list1.val < list2.val:
@@ -25,12 +27,15 @@ class Solution:
 
             current_node = current_node.next
 
-        if (
-            list1
-        ):  # after loop has ended if one of the list is still having elements then add
-            # those elements to the end of our list
+
+        # after loop has ended if one of the list is still having elements then add
+        # those elements to the end of our list
+        if list1:  
             current_node.next = list1
         elif list2:
             current_node.next = list2
 
-        return newnode.next  # return the new list
+
+        # return the new list
+        return newnode.next 
+
