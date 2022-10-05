@@ -3,7 +3,7 @@
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        final=set()        
+        final = set()        
         for i in nums:
             if i in final:
                 return True
