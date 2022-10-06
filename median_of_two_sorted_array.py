@@ -1,3 +1,9 @@
+'''
+Author Name : Shivang Saxena
+Modified On : 06-10-2022
+'''
+
+
 class Solution:
     def findMedianSortedArrays(self,nums1,nums2):
         sorted_array = nums1 + nums2
