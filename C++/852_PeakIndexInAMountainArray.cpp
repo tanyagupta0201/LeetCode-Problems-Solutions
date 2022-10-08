@@ -1,4 +1,5 @@
-// Contributed by @PranavAvasthi
+// Name: Pranav Avasthi
+// Date: 8/10/2022
 
 class Solution {
 public:
