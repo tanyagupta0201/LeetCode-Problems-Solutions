@@ -56,6 +56,34 @@ class Solution {
     public final int UnitBase = 1_000;
 
     public String numberToWords(int num) {
-        return "";
+        if (num == 0)
+            return NumberWordMap.get(num);
+
+        String words = "";
+        int unitIndex = 0;
+
+        while (num > 0) {
+            int n = num % UnitBase;
+
+            while (n > 0) {
+                if (n < NumberMax) {
+                    words = NumberWordMap.get(n) + " " + words;
+                    n = 0;
+                } else if (n < TensMax) {
+                    words = TensWordMap.get(n / TensBase) + " " + words;
+                    n %= NumberMax;
+                } else {
+                    words = NumberWordMap.get(n / TensMax) + " " + TensWordMap.get(TensMax / TensBase) + " " + words;
+                    n %= TensMax;
+                }
+            }
+
+            num /= UnitBase;
+            unitIndex++;
+
+            words = UnitWordMap.get(unitIndex) + " " + words;
+        }
+
+        return words.trim();
     }
 }
