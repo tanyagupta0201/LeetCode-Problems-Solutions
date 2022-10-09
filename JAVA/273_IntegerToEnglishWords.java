@@ -63,25 +63,30 @@ class Solution {
         int unitIndex = 0;
 
         while (num > 0) {
+            String w = "";
             int n = num % UnitBase;
+
+            if (n > 0 && unitIndex != 0) {
+                words = UnitWordMap.get(unitIndex) + " " + words.trim();
+            }
 
             while (n > 0) {
                 if (n < NumberMax) {
-                    words = NumberWordMap.get(n) + " " + words;
+                    w += " " + NumberWordMap.get(n);
                     n = 0;
                 } else if (n < TensMax) {
-                    words = TensWordMap.get(n / TensBase) + " " + words;
-                    n %= NumberMax;
+                    w += " " + TensWordMap.get(n / TensBase);
+                    n %= TensBase;
                 } else {
-                    words = NumberWordMap.get(n / TensMax) + " " + TensWordMap.get(TensMax / TensBase) + " " + words;
+                    w += " " + NumberWordMap.get(n / TensMax) + " " + TensWordMap.get(TensMax / TensBase);
                     n %= TensMax;
                 }
             }
 
+            words = w + " " + words.trim();
+
             num /= UnitBase;
             unitIndex++;
-
-            words = UnitWordMap.get(unitIndex) + " " + words;
         }
 
         return words.trim();
