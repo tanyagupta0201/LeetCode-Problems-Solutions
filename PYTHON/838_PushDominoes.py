@@ -30,8 +30,8 @@ class Solution:
                     else:  
                         current += prevString[0]
 
-                elif i == len(prevString)-1:   # "R." -- resultant force will be towards right
-                    if prevString[i] == "." and prevString[i-1] == "R":
+                elif i == len(prevString)-1:   
+                    if prevString[i] == "." and prevString[i-1] == "R":  # "R." -- resultant force will be towards right
                         current += "R"
                     else:
                         current += prevString[i]
