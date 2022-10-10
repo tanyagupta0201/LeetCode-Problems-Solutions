@@ -1,51 +1,51 @@
-// Aneesh Gupta
-// 10-10-2022
+// Name: Aneesh Gupta
+// Date: 10/10/2022
 
 class MyStack {
 
-    Queue<Integer> mainQ;
-    Queue<Integer> helperQ;
-    public MyStack() {
-        mainQ = new ArrayDeque<>();
-        helperQ = new ArrayDeque<>();
+  Queue < Integer > mainQ;
+  Queue < Integer > helperQ;
+  public MyStack() {
+    mainQ = new ArrayDeque < > ();
+    helperQ = new ArrayDeque < > ();
+  }
+
+  public void push(int x) {
+    mainQ.add(x);
+  }
+
+  public int pop() {
+    if (mainQ.size() == 0) {
+      return -1;
     }
-    
-    public void push(int x) {
-        mainQ.add(x);
+    while (mainQ.size() != 1) {
+      helperQ.add(mainQ.remove());
     }
-    
-    public int pop() {
-        if(mainQ.size() == 0){
-            return -1;
-        }
-        while(mainQ.size() != 1){
-            helperQ.add(mainQ.remove());
-        }
-        int val = mainQ.remove();
-        while(helperQ.size() != 0){
-            mainQ.add(helperQ.remove());
-        }
-        return val;
+    int val = mainQ.remove();
+    while (helperQ.size() != 0) {
+      mainQ.add(helperQ.remove());
     }
-    
-    public int top() {
-        if(mainQ.size() == 0){
-            return -1;
-        }
-        while(mainQ.size() != 1){
-            helperQ.add(mainQ.remove());
-        }
-        int val = mainQ.peek();
-        helperQ.add(mainQ.remove());
-        while(helperQ.size() != 0){
-            mainQ.add(helperQ.remove());
-        }
-        return val;
+    return val;
+  }
+
+  public int top() {
+    if (mainQ.size() == 0) {
+      return -1;
     }
-    
-    public boolean empty() {
-        return mainQ.size() == 0;
+    while (mainQ.size() != 1) {
+      helperQ.add(mainQ.remove());
     }
+    int val = mainQ.peek();
+    helperQ.add(mainQ.remove());
+    while (helperQ.size() != 0) {
+      mainQ.add(helperQ.remove());
+    }
+    return val;
+  }
+
+  public boolean empty() {
+    return mainQ.size() == 0;
+  }
 }
 
 /**
