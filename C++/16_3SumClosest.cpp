@@ -11,26 +11,28 @@ public:
             if (i + 1 < size(nums) && nums[i] == nums[i + 1]) {
                 continue;
             }
-            int left = 0, right = i - 1; //take left node = 0 and right node = ith element -1
+            int left = 0, right = i - 1; // Take left node = 0 and right node = ith element -1
             // Using while, check for condition to find the closest node to the sum of three numbers
             while (left < right) {
                 const auto& total = nums[left] + nums[right] + nums[i];
                 if (total < target) {
-                    ++left; //Here addition of left node is done
+                    ++left; // Here addition of left node is done
                 } else if (total > target) {
-                    --right; //Decrease the right node
+                    --right; // Decrease the right node
                 } else {
-                    return target; //If the central number is equal to left or right, no change in target value.
+                    // If the central number is equal to left or right, no change in target value.
+                    return target; 
                 }
                 if (abs(total - target) < min_diff) {
                     min_diff = abs(total - target);
-                    result = total; //Calculate the total based on the closest of three sum
+                    // Calculate the total based on the closest of three sum
+                    result = total; 
                 }
             }
         }
-        return result; //Display the final result
+        return result; // Display the final result
     }
 };
 
-// Time Complexity:  O(n^2)
-// Space Complexity: O(1)
+// Time Complexity  :  O(n^2)
+// Space Complexity :  O(1)
