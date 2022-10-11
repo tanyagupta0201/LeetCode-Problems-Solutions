@@ -27,30 +27,30 @@ Constraints:
 
  */
 
- //Solution
+ // Solution
 class Solution {
-    //Creating a function for finding the digits sum
+    // Creating a function for finding the digits sum
     int getSum(int n) {
-        //initializing the sum variable
+        // initializing the sum variable
       int sum = 0;
-        //looping through the digits
+        // looping through the digits
       while (n != 0) {
         sum = sum + n % 10;
         n = n / 10;
       }
-      //returning the sum
+      // returning the sum
       return sum;
     }
-    //Creating a function for finding the even digit sum
+    // Creating a function for finding the even digit sum
     public int countEven(int num) {
-    //Creating a variable for storing the count
+    // Creating a variable for storing the count
       int k = -1;
       for (int i = 0; i <= num; i++) {
         if (getSum(i) % 2 == 0) {
           k++;
         }
       }
-      //Returning the even digit sum
+      // Returning the even digit sum
       return k;
     }
   }
