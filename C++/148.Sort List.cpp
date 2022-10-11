@@ -1,21 +1,27 @@
-/* PROBLEM STATEMENT */
+//Kumar sanu
+//Date-11-10-22
+
+/* PROBLEM STATEMENT 
 
         Given the head of a linked list, return the list after sorting it in ascending order.
                         Input: head = [4,2,1,3]
                         Output: [1,2,3,4]
                         
-/*EXPLANATION/ALGO*/
+                        */
+                        
+/*EXPLANATION/ALGO
 
-       //1 . FIND MID USING FAST AND SLOW POINTER .
-       //2.DIVIDE LINKEDLIST ITNO TWO HALFS.
-        //3.THEN SORT THEM AND THEN AGAING MERGE THEM.               
+        1 . FIND MID USING FAST AND SLOW POINTER .
+        2.DIVIDE LINKEDLIST ITNO TWO HALFS.
+        3.THEN SORT THEM AND THEN AGAING MERGE THEM.               
                                       *MERGE SORT*
               -CREATE DUMMY LIST POINT IT TO CURR , THEN CHECK TWO DIVIDED LINKED LIST (L1 L2)
               -IF L1 <= L2 THEN CURR->NEXT=L1     ,CURR->NEXT=L1 AND L1=L1->NEXT
               -ELSE  L1>=L2 THEN CURR->NEXT=L2  
-       //4.IF THERE IS ANY ELEMENT IS LEFT EITHER ON RIGHT OR LEFT THEN :-
-         // IF (L1 != NULL)    CURR->NEXT =L1  AND L1=L1->NEXT
+        4.IF THERE IS ANY ELEMENT IS LEFT EITHER ON RIGHT OR LEFT THEN :-
+          IF (L1 != NULL)    CURR->NEXT =L1  AND L1=L1->NEXT
 
+     */
 
 /*CODE*/
 
