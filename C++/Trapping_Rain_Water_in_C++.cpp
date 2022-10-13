@@ -1,73 +1,43 @@
-//Trapping Rain Water - using Stack
-
-#include <bits/stdc++.h>
-using namespace std;
- 
-// Function to return the maximum
-// water that can be stored
-int maxWater(int height[], int n)
-{
- 
-    // Stores the indices of the bars
-    stack<int> st;
- 
-    // Stores the final result
-    int ans = 0;
- 
-    // Loop through the each bar
-    for (int i = 0; i < n; i++) {
- 
-        // Remove bars from the stack
-        // until the condition holds
-        while ((!st.empty())
-               && (height[st.top()] < height[i])) {
- 
-            // Store the height of the top
-            // and pop it.
-            int pop_height = height[st.top()];
-            st.pop();
- 
-            // If the stack does not have any
-            // bars or the popped bar
-            // has no left boundary
-            if (st.empty())
-                break;
- 
-            // Get the distance between the
-            // left and right boundary of
-            // popped bar
-            int distance = i - st.top() - 1;
- 
-            // Calculate the min. height
-            int min_height
-                = min(height[st.top()], height[i])
-                  - pop_height;
- 
-            ans += distance * min_height;
-        }
- 
-        // If the stack is either empty or
-        // height of the current bar is less than
-        // or equal to the top bar of stack
-        st.push(i);
-    }
-    return ans;
-}
- 
-int main()
-{
- 
-    int arr[] = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
-    int n = sizeof(arr) / sizeof(arr[0]);
- 
-    cout << maxWater(arr, n);
- 
-    return 0;
-}
-
 /*
 
-Time Complexity: O(N)
-Auxiliary Space: O(N)
+Intuition: Precomputation:
+-> We can precompute the maximum height of the bar to the left and right of each bar in linear time.
+
+Approach:
+
+-> We will now precompute the maximum height of the bar to the left and right of the current bar.
+-> Store the maximum height of the bar to the left and right of the current bar in two arrays.
+-> Then iterate over the array and calculate the amount of water that can be stored in the current bar.
+-> Finally add the amount of water that can be stored in the current bar to the total amount of water that can be stored in the array and return the total amount of water that can be stored in the array.
+
+*/
+class Solution {
+public:
+    int trap(vector<int>& height) {
+			int n = height.size();
+			if(n == 0) {
+				return 0;
+			}
+			int left[n];
+			int right[n];
+			left[0] = height[0];
+			for(int i = 1; i < n; i++) {
+				left[i] = max(left[i - 1], height[i]);
+			}
+			right[n - 1] = height[n - 1];
+			for(int i = n - 2; i >= 0; i--) {
+				right[i] = max(right[i + 1], height[i]);
+			}
+			int total = 0;
+			for(int i = 0; i < n; i++) {
+				total += min(left[i], right[i]) - height[i];
+			}
+			return total;
+	}
+};
+
+/*
+Time Complexity: O(n), where n is the number of bars in the histogram.
+Space Complexity: O(n)
 
 */
