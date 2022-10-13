@@ -1,6 +1,6 @@
 //Name: Supriya
 //Date:10/10/2022
-//Question:Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return null.
+//Question:Given the head of a linked list, return the position of node where the cycle begins. If there is no cycle, return null.
 /*Approach: Fast and Slow pointer Method
 step-1: Find the length of the cycle
 step-2: Make first and second pointer which points to head and traverse second pointer upto length of the cycle
