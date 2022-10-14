@@ -11,6 +11,9 @@ Approach:
 -> Finally add the amount of water that can be stored in the current bar to the total amount of water that can be stored in the array and return the total amount of water that can be stored in the array.
 
 */
+// Name - Shivesh Kumar
+// Date - 14/10/2022
+
 class Solution {
 public:
     int trap(vector<int>& height) {
