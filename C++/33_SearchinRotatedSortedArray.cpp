@@ -9,7 +9,7 @@ class Solution {
 
          while (l <= r) {
 
-            //find mid
+            // find mid
             int mid = (l + r) / 2;
 
             if (target == nums[mid])
