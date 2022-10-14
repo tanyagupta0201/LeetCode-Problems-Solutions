@@ -47,11 +47,13 @@ Constraints:
 // Solution
 
 class Solution {
-    public int minCostToMoveChips(int[] position) {
+    public int minCostToMoveChips(int[] position)
+    {
         // Store the count of even and odd elements
         int odd = 0, even = 0; 
+    
         // Traverse the array position[]
-        for (int i=0;i<position.length;i++)
+        for (int i = 0; i < position.length; i++)
         {   
             // Count even elements
             if (position[i] % 2 == 0)
@@ -60,7 +62,8 @@ class Solution {
             else
                 odd++;
         }
-        // Return the minimum count
+        
+       // Return the minimum count
        return Math.min(even, odd);
     }
 }
