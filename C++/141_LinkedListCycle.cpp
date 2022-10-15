@@ -1,3 +1,9 @@
+// Author: Garv Luthra
+// Date: 14/10/22
+
+
+// link of the leetcode problem below:
+
 // https://leetcode.com/problems/linked-list-cycle/
 
 /**
@@ -22,6 +28,7 @@ class Solution {
         p = p -> next;
 
         // if h and p collides then, we have a cyclic linked list
+        // else we don't have a cyclic linked list
 
         if (h == p) {
 
