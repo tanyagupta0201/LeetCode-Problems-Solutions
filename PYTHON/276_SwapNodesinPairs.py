@@ -1,7 +1,7 @@
-#Author name:Chengalva Sai Harikha
-#Date:15/10/2022
-#Time complexity:O(n)
-#Space Complexity:O(1)
+# Author name:Chengalva Sai Harikha
+# Date:15/10/2022
+# Time complexity:O(n)
+# Space Complexity:O(1)
 # Definition for singly-linked list.
 # class ListNode(object):
 #     def __init__(self, val=0, next=None):
@@ -15,11 +15,11 @@ class Solution(object):
         """
         if not head:
             return head
-        #3 variables assigned to store 1st node and next node
+        # 3 variables assigned to store 1st node and next node
         previous,current,answer=None,head,head.next
-        #loop runs till current or current.next is not None 
+        # loop runs till current or current.next is not None 
         while current and current.next:
-            #adj variable stores the next variable to current
+            # adj variable stores the next variable to current
             adj=current.next
             if previous:
                 previous.next=adj
