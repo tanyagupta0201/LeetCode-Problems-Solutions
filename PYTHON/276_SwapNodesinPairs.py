@@ -1,6 +1,6 @@
 # Author name:Chengalva Sai Harikha
 # Date:15/10/2022
-# Time complexity:O(n)
+# Time complexity:O(n) where n is the length
 # Space Complexity:O(1)
 # Definition for singly-linked list.
 # class ListNode(object):
