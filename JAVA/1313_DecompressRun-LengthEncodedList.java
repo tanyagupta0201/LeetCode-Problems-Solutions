@@ -35,26 +35,26 @@ nums.length % 2 == 0
 
  // Solution
 
- class Solution {
-    public int[] decompressRLElist(int[] nums) {
+class Solution {
+  public int[] decompressRLElist(int[] nums) {
 
-        // Initialize frequency
-        int freq = 0;
-        for(int i=0; i<nums.length; i+=2){
-            freq += nums[i];
-        }
-
-        int output[] = new int[freq]; // Necessary size
-
-        // Now add the values into the array
-        int currentIndex = 0;
-        for(int i=1; i<nums.length; i+=2){ // Get the value
-            for(int j=0; j<nums[i-1]; j++){ // Add it the number of times as the freq
-                output[currentIndex]=nums[i];
-                currentIndex++;
-            }
-        }
-
-        return output;
+    // Initialize frequency
+    int freq = 0;
+    for (int i = 0; i < nums.length; i += 2) {
+      freq += nums[i];
     }
+
+    int output[] = new int[freq]; // Necessary size
+
+    // Now add the values into the array
+    int currentIndex = 0;
+    for (int i = 1; i < nums.length; i += 2) { // Get the value
+      for (int j = 0; j < nums[i - 1]; j++) { // Add it the number of times as the freq
+        output[currentIndex] = nums[i];
+        currentIndex++;
+      }
+    }
+
+    return output;
+  }
 }
