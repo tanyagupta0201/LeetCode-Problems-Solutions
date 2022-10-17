@@ -16,13 +16,13 @@ class Solution(object):
         if not head:
             return head
         # 3 variables assigned to store 1st node and next node
-        previous,current,answer=None,head,head.next
-        # loop runs till current or current.next is not None 
+        previous, current, answer = None, head, head.next
+        # loop runs till current or current.next is not None
         while current and current.next:
             # adj variable stores the next variable to current
-            adj=current.next
+            adj = current.next
             if previous:
-                previous.next=adj
-            current.next,adj.next=adj.next,current
-            previous,current=current,current.next
+                previous.next = adj
+            current.next, adj.next = adj.next, current
+            previous, current = current, current.next
         return answer or head
