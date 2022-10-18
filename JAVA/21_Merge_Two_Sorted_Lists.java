@@ -17,11 +17,9 @@
 class Solution {
   public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
     
-    
     // Create a dummy Linked List to store the resultant merged list.
     // This linked list has hed value -1.
     ListNode dummy = new ListNode(-1);
-    
     
     // Declare three objects of ListNode initialized with head of list1, list2 and dummy.
     ListNode pt1 = list1;
