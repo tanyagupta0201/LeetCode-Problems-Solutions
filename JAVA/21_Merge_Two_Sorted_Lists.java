@@ -26,26 +26,26 @@ class Solution {
     ListNode pt2 = list2;
     ListNode pt3 = dummy;
     
-    //Iterate through list1 and list2
+    // Iterate through list1 and list2
     while (pt1 != null && pt2 != null) {
       if (pt1.val < pt2.val) {
-        pt3.next = pt1;  //Append node store in pt1 into pt3
-        pt1 = pt1.next; //move pt1 to next node
+        pt3.next = pt1;  // Append node store in pt1 into pt3
+        pt1 = pt1.next; // Move pt1 to next node
       } else {
-        pt3.next = pt2; //Append node store in pt2 into pt3
-        pt2 = pt2.next; //move pt1 to next node
+        pt3.next = pt2; // Append node store in pt2 into pt3
+        pt2 = pt2.next; // Move pt1 to next node
       }
-      pt3 = pt3.next; //Always move pt3 to next node
+      pt3 = pt3.next; // Always move pt3 to next node
     }
     
-    //Check if there is stil any node left in pt1, if yes then append it to pt3
+    // Check if there is stil any node left in pt1, if yes then append it to pt3
     while (pt1 != null) { 
       pt3.next = pt1;
       pt1 = pt1.next;
       pt3 = pt3.next;
     }
     
-    //Check if there is stil any node left in pt2, if yes then append it to pt3
+    // Check if there is stil any node left in pt2, if yes then append it to pt3
     while (pt2 != null) {
       pt3.next = pt2;
       pt2 = pt2.next;
