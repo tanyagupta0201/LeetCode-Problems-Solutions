@@ -1,5 +1,5 @@
-//Name: Abuzar Bagewadi
-//Contributed Date: 19/10/2022
+// Name: Abuzar Bagewadi
+// Contributed Date: 19/10/2022
 
 /*
 
@@ -10,6 +10,7 @@
 -> Then the destination corner could be calculated using this x/y ratio.
 -> We used modulo 2 is that if x/y=10/4 for example, the laser will firstly reach the corner 0 when x/y=5/2 before x/y=10/4. You can draw a similar graph to simulate it.
 -> So, when the laser first reaches a corner, the x and y cannot both be even. So we keep using modulo 2 to let x and y go down.
+
 */
 
 class Solution {
@@ -21,15 +22,15 @@ class Solution {
       p /= 2;
       q /= 2;
     }
-    //case 1: if p is even
+    // case 1: if p is even
     if (p % 2 == 0) {
       return 2;
     }
-    //case 1: if q is even
+    // case 2: if q is even
     else if (q % 2 == 0) {
       return 0;
     }
-    //case 3: if both are odd
+    // case 3: if both are odd
     else {
       return 1;
     }
