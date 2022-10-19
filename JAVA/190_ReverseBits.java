@@ -1,5 +1,5 @@
-//Name:- Siddhartha Mishra 
-//Date: - 19 Oct 2022
+// Name:- Siddhartha Mishra 
+// Date: - 19 Oct 2022
 
 /* 
  * LeetCode problem:- 190(Reverse Bits)
@@ -25,7 +25,7 @@ Explanation: The input binary string 11111111111111111111111111111101 represents
 
  */
 
- //Solution
+ // Solution
 
  public class Solution {
     // you need treat n as an unsigned value
