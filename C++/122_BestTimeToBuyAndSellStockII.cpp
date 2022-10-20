@@ -14,17 +14,17 @@ Find and return the maximum profit you can achieve.
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
 
 class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-         // n: size of given vector
-         // s:sum of all the profit 
-        
-        int n=prices.size(),s=0;
-        
-        for(int i=1;i<n;i++){
-            if(prices[i]>prices[i-1])
-                s+=prices[i]-prices[i-1];  
-        }
-        return s;
+  public:
+    int maxProfit(vector < int > & prices) {
+      // n: size of given vector
+      // s:sum of all the profit 
+
+      int n = prices.size(), s = 0;
+
+      for (int i = 1; i < n; i++) {
+        if (prices[i] > prices[i - 1])
+          s += prices[i] - prices[i - 1];
+      }
+      return s;
     }
 };
