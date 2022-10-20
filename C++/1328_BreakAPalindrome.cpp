@@ -18,7 +18,7 @@ class Solution {
 
       for (int i = 0; i < n / 2; i++) {
 
-        //replave non - a char with a :
+        // replave non - a char with a :
 
         if (s[i] != 'a') {
 
@@ -32,7 +32,7 @@ class Solution {
 
       }
 
-      //if there are all 'a's then replace last with 'b' :
+      // if there are all 'a's then replace last with 'b' :
 
       if (!f) s[n - 1] = 'b';
 
