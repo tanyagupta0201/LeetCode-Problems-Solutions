@@ -1,9 +1,10 @@
-//name:-
-//date:- 
+// Name:- Siddhartha Mishra
+// Date:- 20th October,2022
 /*
-  Leetcode problem:- 136 (Single Number)
 
- * Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+Leetcode problem:- 136 (Single Number)
+
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
 You must implement a solution with a linear runtime complexity and use only constant extra space.
 
@@ -28,6 +29,7 @@ Constraints:
 1 <= nums.length <= 3 * 104
 -3 * 104 <= nums[i] <= 3 * 104
 Each element in the array appears twice except for one element which appears only once.
+
  */
 
 class Solution {
@@ -36,7 +38,7 @@ class Solution {
         for (int num : nums){
             res ^= num;
         }
-        return res;// return the single Number from the array 
+        return res; // Return the single Number from the array 
         
     }
 }
