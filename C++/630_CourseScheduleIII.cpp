@@ -14,7 +14,7 @@ public:
         priority_queue<int> pq;
         int time = 0; // time to store the total time taken
         
-        for(int i=0; i<courses.size(); i++){
+        for(int i = 0; i < courses.size(); i++){
 
             // adding course time to total time and pushing in the priority queue
             time += courses[i][0];
