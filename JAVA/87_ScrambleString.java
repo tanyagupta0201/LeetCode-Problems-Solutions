@@ -1,11 +1,11 @@
-//Name:-
-//Date:-
+//Name:- Siddhartha Mishra
+//Date:- 20th October, 2022
 
 /*
- * LeetCode:- 87 (Scramble String)
- * 
- * 
- * We can scramble a string s to get a string t using the following algorithm:
+ 
+LeetCode:- 87 (Scramble String)
+ 
+We can scramble a string s to get a string t using the following algorithm:
 
 If the length of the string is 1, stop.
 If the length of the string is > 1, do the following:
@@ -44,7 +44,8 @@ Constraints:
 s1.length == s2.length
 1 <= s1.length <= 30
 s1 and s2 consist of lowercase English letters.
- */
+
+*/
 
 class Solution {
     public boolean isScramble(String s1, String s2) {
@@ -53,7 +54,7 @@ class Solution {
         int n = s1.length();
         boolean[][][] dp = new boolean[n + 1][n][n];
         char[] c1 = s1.toCharArray(), c2 = s2.toCharArray();
-        // initialization for length = 1
+        // Initialization for length = 1
         for (int j = 0; j < n; j++) {
             for (int k = 0; k < n; k++) {
                 if (c1[j] == c2[k]) {
@@ -61,11 +62,11 @@ class Solution {
                 }
             }
         }
-        // checking for length start from 2 to n
+        // Checking for length start from 2 to n
         for (int i = 2; i <= n; i++) {
             for (int j = 0; j <= n - i; j++) {
                 for (int k = 0; k <= n - i; k++) {
-                    //check every possible breaking point
+                    // Check every possible breaking point
                     for (int b = 1; b < i && !dp[i][j][k]; b++) {
                         dp[i][j][k] = (dp[b][j][k] && dp[i - b][j + b][k + b]) || (dp[b][j][k + i - b] && dp[i - b][j + b][k]);
                     }
