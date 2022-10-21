@@ -1,5 +1,6 @@
-//Name :- Pushkar Roy
-//Date :- 05-10-2022
+// Name :- Pushkar Roy
+// Date :- 05-10-2022
+
 /*
 Given a non-negative integer c, decide whether there're two integers a and b such that a2 + b2 = c.
 
@@ -11,11 +12,11 @@ Explanation: 1 * 1 + 2 * 2 = 5
 Example 2:
 Input: c = 3
 Output: false
- */
+*/
 
 class Solution {
   public:
-    //make function for check square or not
+    // make function for check square or not
     bool judgeSquareSum(int c) {
       long long int l = 0;
 
@@ -41,5 +42,6 @@ class Solution {
       return false;
     }
 };
-//TC :- O(logn) because we use Binary search technique
-//SC :- O(1)  store nothing
+
+// TC :- O(logn) because we use Binary search technique
+// SC :- O(1)  store nothing
