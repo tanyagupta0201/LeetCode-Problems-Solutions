@@ -1,5 +1,5 @@
-//name:-
-//date:- 
+// Name:- Siddhartha Mishra
+// Date:- 21/10/22
 /*
  * Leetcode:- 202 ( Happy Number)
  * 
@@ -35,14 +35,14 @@ Constraints:
  * 
  */
 
- //solution 
+ // Solution 
 
  class Solution {
     public boolean isHappy(int n) {
         int slow = n, fast = n;
         do {
-            slow = cal(slow);
-            fast = cal(cal(fast));
+            slow = cal(slow);  // Calling cal function 
+            fast = cal(cal(fast));  // Calling cal function 
         } while (slow != fast);
         return slow == 1;
         
@@ -54,7 +54,7 @@ Constraints:
             res += d * d;
             n /= 10;
         }
-        return res;
+        return res; // Returning the value 
     }
     
 }
