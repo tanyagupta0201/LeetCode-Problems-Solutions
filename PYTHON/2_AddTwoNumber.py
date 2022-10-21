@@ -2,7 +2,7 @@
 # Date: 21/10/2022
 
 class Solution:
-	#function will reverse list
+	# function will reverse list
 	def reverse(self, head):
 		if head is None or head.next is None:
 			return head
@@ -17,7 +17,7 @@ class Solution:
 		head = prev
 		return head
 
-	#function will add two number by linked list
+	# function will add two number by linked list
 	def addTwoLists(self, first, second):
 		curr1 = self.reverse(first)
 		curr2 = self.reverse(second)
@@ -27,7 +27,7 @@ class Solution:
 		prev = None
 		while curr1 is not None or curr2 is not None:
 		# while both lists have atleast one node
-			sum = carry + (curr1.data if curr1 else 0) + \
+			sum = carry + (curr1.data if curr1 else 0) + 
 				(curr2.data if curr2 else 0)
 			carry = (1 if sum >= 10 else 0)
 			sum = sum % 10
@@ -57,7 +57,7 @@ class LinkedList:
 	def __init__(self):
 		self.head = None
 		self.tail = None
-	#insert linked list
+	# insert linked list
 	def insert(self, val):
 		if self.head is None:
 			self.head = Node(val)
@@ -73,14 +73,14 @@ def printList(n):
 	print()
   
 if __name__ == "__main__":
-	#take a first list
+	# take a first list
 	arr1 = [7, 5, 9, 4, 6]
 	LL1 = LinkedList()
 	for i in arr1:
 		LL1.insert(i)
 	print("First list is", end = " ")
 	printList(LL1.head)
-	#take 2nd list
+	# take 2nd list
 	arr2 = [8, 4]
 	LL2 = LinkedList()
 	for i in arr2:
