@@ -13,14 +13,14 @@ class Solution(object):
             return ls
         count = 0
         index = 0
-        #count to find the no. of elements that needs to be removed 
+        # count to find the no. of elements that needs to be removed 
         while index < ls - count:
             if nums[index] == val:
                 nums[index] = nums[ls - 1 - count]
                 count += 1
             else:
                 index += 1
-        return ls - count         #returns the no. of elements present after removing the elements that needs to be removed 
+        return ls - count         # returns the no. of elements present after removing the elements that needs to be removed 
 
 if __name__ == '__main__':
     # begin
