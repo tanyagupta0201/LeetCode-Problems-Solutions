@@ -31,12 +31,14 @@ Each element in the array appears twice except for one element which appears onl
  */
 
 class Solution {
-    public int singleNumber(int[] nums) {
+    public int singleNumber(int[] nums) 
+    {
         int res = 0;
-        for (int num : nums){
+        for (int num : nums)
+        {
             res ^= num;
         }
-        return res;// Return the single Number from the array 
         
+        return res; // Return the single Number from the array 
     }
 }
