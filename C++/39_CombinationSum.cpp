@@ -1,23 +1,46 @@
 // Name: Shreya Shankar
 // Date: 21/10/2022
 
-vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
-    vector<vector<int>> result;
-    int size = candidates.size();
-    if (size == 0) return result;
-    sort(candidates.begin(), candidates.end());
-    vector<vector<vector<int>>> dp(target + 1, vector<vector<int>>());
-    dp[0].push_back(vector<int>());
-    
-    for (int i = 1; i <= target; ++i) {
-        for (int j = 0; j < size && candidates[j] <= i; ++j) {
-            for (int k = 0; k < dp[i - candidates[j]].size(); ++k) {
-                vector<int> temp = dp[i - candidates[j]][k];
-                if (temp.size() && (temp[temp.size() - 1] > candidates[j])) continue;
-                temp.push_back(candidates[j]);
-                dp[i].push_back(temp);
-            }
+class Solution {
+public:
+
+    void Sum(vector<int>& candidates, int target, vector<vector<int> >& res, vector<int>& r, int i)
+    {
+        
+        if(target == 0)
+        {
+            // if we get exact answer
+            res.push_back(r);
+            return;
         }
-    }
-    return dp[target];
+        
+        while(i <  candidates.size() && target - candidates[i] >= 0)
+        {
+            // Till every element in the array starting
+            // from i which can contribute to the target
+            r.push_back(candidates[i]);// add them to vector
+            
+            // recur for next numbers
+            Sum(candidates,target - candidates[i],res,r,i);
+            ++i;
+            
+            // Remove number from vector (backtracking)
+            r.pop_back();
+        }
 }
+    
+     
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        sort(candidates.begin(),candidates.end()); // sort candidates array
+        
+        // remove duplicates
+        candidates.erase(unique(candidates.begin(),candidates.end()),candidates.end());
+        
+        vector<int> r;
+        vector<vector<int> > res;
+        
+        Sum(candidates,target,res,r,0);
+        
+        return res;
+    }
+};
