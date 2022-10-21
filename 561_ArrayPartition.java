@@ -1,5 +1,5 @@
-// Name-Ritesh kumar verma
-//Date-20th, October 2022
+// Name- Ritesh kumar verma
+// Date- 20 October, 2022
 
 /*
 
