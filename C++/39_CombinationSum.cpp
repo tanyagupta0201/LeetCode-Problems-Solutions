@@ -4,7 +4,7 @@
 class Solution {
     public:
 
-    void Sum(vector < int > & candidates, int target, vector < vector < int > > & res, vector < int > & r, int i) {
+    void Sum(vector<int> &candidates, int target, vector<vector<int>> &res, vector<int> &r, int i) {
 
             if (target == 0) {
                 // if we get exact answer
@@ -26,15 +26,15 @@ class Solution {
             }
         }
 
-    vector < vector < int >> combinationSum(vector < int > & candidates, int target) {
+    vector<vector<int>> combinationSum(vector<int> &candidates, int target) {
 
             sort(candidates.begin(), candidates.end()); // sort candidates array
 
             // remove duplicates
             candidates.erase(unique(candidates.begin(), candidates.end()), candidates.end());
 
-            vector < int > r;
-            vector < vector < int > > res;
+            vector<int> r;
+            vector<vector<int>> res;
 
             Sum(candidates, target, res, r, 0);
 
