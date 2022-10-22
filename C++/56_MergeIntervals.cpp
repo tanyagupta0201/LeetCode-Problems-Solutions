@@ -9,14 +9,14 @@ public:
     }
     
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        vector<vector<int>>v;
+        vector<vector<int>> v;
         
-        sort(intervals.begin(), intervals.end(),cmp);   // Sort according to cmp function.
+        sort(intervals.begin(), intervals.end(), cmp);   // Sort according to cmp function.
 
         for(int i = 0; i < intervals.size(); ++i){
             vector<int> res = intervals[i];
-            while(i + 1 < intervals.size() && intervals[i+1][0] <= res[1]){     // Check which intervals are lapping.
-                if(intervals[i+1][1] > res[1]){
+            while(i + 1 < intervals.size() && intervals[i + 1][0] <= res[1]) {     // Check which intervals are lapping.
+                if(intervals[i + 1][1] > res[1]) {
                         res[1] = intervals[i+1][1];     // Merge the overlapping intervals.
                 }
                  ++i;
