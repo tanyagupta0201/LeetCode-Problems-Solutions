@@ -17,7 +17,7 @@ public:
             vector<int> res = intervals[i];
             while(i + 1 < intervals.size() && intervals[i + 1][0] <= res[1]) {     // Check which intervals are lapping.
                 if(intervals[i + 1][1] > res[1]) {
-                        res[1] = intervals[i+1][1];     // Merge the overlapping intervals.
+                        res[1] = intervals[i + 1][1];     // Merge the overlapping intervals.
                 }
                  ++i;
             }
