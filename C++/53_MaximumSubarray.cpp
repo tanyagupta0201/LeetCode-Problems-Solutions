@@ -2,7 +2,6 @@
 // Date: 22 Oct, 2022
 
 
-
 class Solution {
   public:
     int maxSubArray(vector <int> &nums) {
@@ -22,7 +21,7 @@ class Solution {
           sum = 0;
       }
 
-    // Finally we return ans as a result. 
+      // Finally we return ans as a result. 
       return ans;
     }
 };
