@@ -6,7 +6,7 @@ class Solution:
         s = 0
         for i in range(1 , len(colors)):
             # finding the maximum of the needed time for both the elements in case they are equal
-            if colors[i] == colors[i-1]:
+            if colors[i] == colors[i - 1]:
                 t=  max(t , neededTime[i])
             else:
                 # adding it to the sum if the elements are not equal
