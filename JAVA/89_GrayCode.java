@@ -45,23 +45,24 @@ Constraints:
  // Solution 
 
  class Solution {
-    public List<Integer> grayCode(int n) {
+    public List<Integer> grayCode(int n) 
+    {
         
-        List<Integer> list = new ArrayList<>();
-
-        list.add(0);
-        if(n <=0) return list;
-
-        int i=0;
-        while(i < n){
-            int b = 1 << i++;
-            int size = list.size();
-            for(int j= size-1; j>=0; j--){
-                int v = list.get(j);
-                list.add(v | b);
-            }
+           if(n==0)
+        {
+        List<Integer> result = new ArrayList<Integer>();
+        result.add(0);
+        return result;
         }
-
-        return list;// Returning the list 
+ 
+        List<Integer> result = grayCode(n-1);
+        int numToAdd = 1<<(n-1);
+ 
+        for(int i=result.size()-1; i>=0; i--)
+         { // Iterate from last to first
+            result.add(numToAdd+result.get(i));
+         }
+ 
+         return result; // Returning the result
     }
 }
