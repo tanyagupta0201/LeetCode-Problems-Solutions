@@ -6,9 +6,11 @@ public:
     int maxProduct(vector<int>& nums) 
     {
         // Return early if input is empty
-        if (nums.empty()) return 0;
+        if (nums.empty()) 
+	   return 0;
 		
         int best = INT_MIN;
+	
         // Running products
         int maxProd = 1;
         int minProd = 1;
@@ -20,10 +22,12 @@ public:
                 // Swap max and min
                 swap(maxProd, minProd);
             }
+	    
             // Reset to current value if smaller or larger than it
             // (intuitively means that we start considering a new sub-array)
-            maxProd = max(maxProd*n, n);
-            minProd = min(minProd*n, n);
+            maxProd = max(maxProd * n, n);
+            minProd = min(minProd * n, n);
+	    
             // Update the best
             best = max(best, maxProd);
         }
