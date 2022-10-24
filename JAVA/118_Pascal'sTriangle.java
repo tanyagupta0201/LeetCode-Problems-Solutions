@@ -1,5 +1,19 @@
 // Name:-Supun Nilakshana
 // Date:- 24 October 2022
+
+// Given numRows, generate the first numRows of Pascal's triangle.
+
+// Example:
+// For example, given numRows = 5,
+// Return
+
+// [
+//      [1],
+//     [1,1],
+//    [1,2,1],
+//   [1,3,3,1],
+//  [1,4,6,4,1]
+// ]
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         int[][] pascal = new int[numRows][];
