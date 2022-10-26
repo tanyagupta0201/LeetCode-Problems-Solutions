@@ -11,13 +11,13 @@ class Solution(object):
         str1 = ""
         str2 = ""
         
-        #Create a single string of all elements in array 1 
+        # Create a single string of all elements in array 1 
         for i in word1:
             str1 += i
             
-        #similarly in array 2
+        # similarly in array 2
         for i in word2:
             str2 += i
             
-        #check if both are equal or not
+        # check if both are equal or not
         return (str1 == str2)
