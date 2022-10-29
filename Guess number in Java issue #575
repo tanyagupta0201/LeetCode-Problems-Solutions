@@ -1,0 +1,78 @@
+import java.util.Scanner;
+class GuessName
+{
+  public int
+
+   Guessnumber()
+
+    {
+
+          Scanner sc = new Scanner(System.in);
+ 
+
+          int number = 1 + (int)(100
+
+                               * Math.random());
+ 
+
+     
+    
+
+        int i, guess;
+ 
+
+        System.out.println(
+
+            "A number is chosen"
+
+            + " between 1 to 100."
+
+            + "Guess the number");
+ 
+
+      System.out.println(
+
+                "Guess the number:");
+ 
+
+
+            guess = sc.nextInt();
+ 
+            if (number == guess) {
+
+                System.out.println(
+
+                    "Congratulations!"
+
+                    + " You guessed the number.");
+
+               return 0;
+
+            }
+
+            else if (number < guess) {
+
+               return -1;
+
+            }
+
+            return 1;
+            
+   }
+
+    
+}
+public class Main{
+public static void
+    main(String arg[])
+    {
+
+    
+    int b= -1;
+        while(b!=0){
+    GuessName g=new GuessName();
+    b=g.Guessnumber();
+    System.out.println(b);
+}
+    }
+}
